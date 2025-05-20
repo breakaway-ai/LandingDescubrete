@@ -60,34 +60,30 @@ const Download = () => {
               href="https://play.google.com/store" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-deep-teal hover:bg-deep-teal/90 text-white py-6 px-8 rounded-2xl flex items-center justify-center gap-4 shadow-lg"
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+              whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto"
             >
-              <div className="text-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20.5v-17A.5.5 0 0 1 5.5 3H6l13 8.5-13 8.5h-.5a.5.5 0 0 1-.5-.5zM12 12l5.5 3.5-7 4.5V4l7 4.5L12 12z"/></svg>
-              </div>
-              <div className="text-left">
-                <div className="text-xs opacity-80">DESCARGA EN</div>
-                <div className="text-xl font-bold">Google Play</div>
-              </div>
+              <img 
+                src="/src/assets/images/GetItOnGooglePlay.png"
+                alt="Get it on Google Play" 
+                className="h-16 w-auto object-contain"
+              />
             </motion.a>
             
             <motion.a 
               href="https://apps.apple.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-dark hover:bg-dark/90 text-white py-6 px-8 rounded-2xl flex items-center justify-center gap-4 shadow-lg"
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+              whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.98 }}
+              className="w-full sm:w-auto"
             >
-              <div className="text-3xl">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.37 3.51 7.08 9.05 6.88c1.65.08 2.78.94 3.75.94 1 0 2.83-1.16 4.78-.99 1.83.15 3.22.91 4.11 2.33-3.54 2.23-2.97 6.71.26 8.58-.76 1.92-1.8 3.6-3.9 4.54z"/><path d="M12.77 4.05c.8-1.07 1.45-2.61 1.22-4.21-1.32.09-2.84.92-3.73 2.03-.82 1-1.51 2.58-1.24 4.08 1.42.11 2.87-.72 3.75-1.9z"/></svg>
-              </div>
-              <div className="text-left">
-                <div className="text-xs opacity-80">DESCARGA EN</div>
-                <div className="text-xl font-bold">App Store</div>
-              </div>
+              <img 
+                src="/src/assets/images/DownloadOnTheAppStore.png"
+                alt="Download on the App Store" 
+                className="h-16 w-auto object-contain"
+              />
             </motion.a>
           </motion.div>
 

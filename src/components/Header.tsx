@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const Header = () => {
   return (
     <motion.header 
-      className="fixed w-full z-50 bg-white/80 backdrop-blur-md py-4"
+      className="fixed w-full z-50 bg-deep-teal py-4"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -14,28 +14,54 @@ const Header = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          {/* Replace with actual logo */}
-          <div className="text-3xl font-bold text-orange-vibrant">
-            Descúbrete<span className="text-deep-teal">+</span>
+          <motion.img 
+            src="/src/assets/images/Logo.avif" 
+            alt="Descúbrete+ Logo" 
+            className="h-10 mr-3"
+            initial={{ opacity: 0, rotate: -10 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            transition={{ duration: 0.8 }}
+          />
+          <div className="text-3xl font-bold text-white">
+            Descúbrete<span className="text-orange-vibrant">+</span>
           </div>
         </motion.div>
 
         <nav className="hidden md:flex space-x-8">
-          <a href="#community" className="text-dark hover:text-orange-vibrant transition-colors">
-            Comunidad
-          </a>
-          <a href="#nepsis" className="text-dark hover:text-orange-vibrant transition-colors">
-            Nepsis
-          </a>
-          <a href="#download" className="text-dark hover:text-orange-vibrant transition-colors">
-            Descargar
-          </a>
+          {[
+            { name: 'Comunidad', href: '#community' },
+            { name: 'Nepsis', href: '#nepsis' },
+            { name: 'Descargar', href: '#download' }
+          ].map((item, index) => (
+            <motion.a 
+              key={index}
+              href={item.href} 
+              className="text-white hover:text-orange-vibrant transition-colors relative"
+              whileHover={{ 
+                scale: 1.1,
+                transition: { duration: 0.2 }
+              }}
+            >
+              {item.name}
+              <motion.div 
+                className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-vibrant"
+                whileHover={{ 
+                  width: '100%',
+                  transition: { duration: 0.3 }
+                }}
+              />
+            </motion.a>
+          ))}
         </nav>
 
         <motion.a 
           href="#download"
           className="bg-orange-vibrant text-white px-6 py-2 rounded-full font-medium"
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ 
+            scale: 1.05, 
+            boxShadow: "0 10px 15px -3px rgba(255, 102, 0, 0.3)",
+            transition: { duration: 0.2 }
+          }}
           whileTap={{ scale: 0.95 }}
         >
           Descargar App

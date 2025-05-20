@@ -1,69 +1,128 @@
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  // Animation variants for staggered animation
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1, 
+      transition: { 
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      } 
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <section className="pt-32 pb-20 min-h-screen flex items-center bg-white overflow-hidden">
       <div className="container mx-auto px-4 relative">
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 z-10">
+        <motion.div 
+          className="flex flex-col lg:flex-row items-center"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="lg:w-1/2 z-10" variants={itemVariants}>
             <motion.h1 
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ 
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                delay: 0.5
+              }}
             >
-              <span className="text-deep-teal">Construye tu futuro</span> con nuestra 
-              <span className="text-orange-vibrant"> comunidad</span>
+              <motion.span 
+                className="text-deep-teal inline-block"
+                animate={{ 
+                  scale: [1, 1.03, 1],
+                  transition: { 
+                    duration: 1.5, 
+                    repeat: Infinity,
+                    repeatType: "reverse" 
+                  }
+                }}
+              >
+                Construye tu futuro
+              </motion.span> 
+              <span> con nuestra </span>
+              <motion.span 
+                className="text-orange-vibrant inline-block"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  transition: { 
+                    duration: 1.5, 
+                    delay: 0.5,
+                    repeat: Infinity,
+                    repeatType: "reverse" 
+                  }
+                }}
+              >
+                comunidad
+              </motion.span>
             </motion.h1>
             
             <motion.p 
               className="text-xl mb-8 max-w-xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              variants={itemVariants}
             >
               Descúbrete+ es un ecosistema de comunidad vibrante para personas que buscan crecimiento personal y profesional, con acceso a Nepsis, tu coach emocional personalizado.
             </motion.p>
             
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              variants={itemVariants}
             >
               <motion.a 
                 href="https://play.google.com/store" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-orange-vibrant text-white px-8 py-4 rounded-full font-medium flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
+                className="bg-deep-teal text-white px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 shadow-lg"
+                whileHover={{ scale: 1.05, boxShadow: "0 15px 25px -5px rgba(0, 51, 102, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20.5v-17A.5.5 0 0 1 5.5 3H6l13 8.5-13 8.5h-.5a.5.5 0 0 1-.5-.5zM12 12l5.5 3.5-7 4.5V4l7 4.5L12 12z"/></svg>
-                </span>
-                Google Play
+                <img 
+                  src="/src/assets/images/LogoGooglePlay.png" 
+                  alt="Google Play" 
+                  className="h-8"
+                />
+                <div className="text-left">
+                  <div className="text-xs opacity-80">DESCARGA EN</div>
+                  <div className="font-medium">Google Play</div>
+                </div>
               </motion.a>
               
               <motion.a 
                 href="https://apps.apple.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-deep-teal text-white px-8 py-4 rounded-full font-medium flex items-center justify-center"
-                whileHover={{ scale: 1.05 }}
+                className="bg-dark text-deep-teal px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 shadow-xl"
+                whileHover={{ scale: 1.05, boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM9.88 14.12L8.12 16a6 6 0 0 1 0-8l1.76 1.88A4 4 0 0 0 9.88 14.12zm2.12 5.76V19h2v2.88a8.06 8.06 0 0 1-2 0zm0-17.76V4H10V2.12a8.06 8.06 0 0 1 2 0zm6.88 3.88L17.12 8A4 4 0 0 0 13 9.88L11.12 8a6 6 0 0 1 7.88-2z"/></svg>
-                </span>
-                App Store
+                <img 
+                  src="/src/assets/images/LogoAppStore.webp" 
+                  alt="App Store" 
+                  className="h-8"
+                />
+                <div className="text-left">
+                  <div className="text-xs opacity-80">DESCARGA EN</div>
+                  <div className="font-medium">App Store</div>
+                </div>
               </motion.a>
             </motion.div>
-          </div>
+          </motion.div>
           
           <div className="lg:w-1/2 mt-12 lg:mt-0">
             <motion.div
-              className="w-full h-[500px] bg-gradient-to-br from-deep-teal/10 to-orange-vibrant/10 rounded-2xl flex items-center justify-center"
+              className="w-full h-[500px] bg-gradient-to-br from-deep-teal/10 to-orange-vibrant/10 rounded-2xl flex items-center justify-center relative"
               initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ 
@@ -73,14 +132,86 @@ const Hero = () => {
                 stiffness: 100 
               }}
             >
-              {/* Here we would add a 3D animation or illustration */}
-              <div className="text-center">
-                <div className="text-xl text-deep-teal mb-4">Visualización 3D avanzada</div>
-                <div className="text-light-gray">(Animación 3D a implementar)</div>
-              </div>
+              {/* 3D animation placeholder */}
+              <motion.div
+                className="absolute inset-0 overflow-hidden rounded-2xl"
+                animate={{
+                  background: [
+                    "radial-gradient(circle at 30% 30%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
+                    "radial-gradient(circle at 70% 70%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
+                    "radial-gradient(circle at 30% 70%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
+                    "radial-gradient(circle at 70% 30%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
+                    "radial-gradient(circle at 30% 30%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
+                  ],
+                }}
+                transition={{
+                  duration: 15,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+              />
+              
+              {/* Animated particles */}
+              {[...Array(20)].map((_, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute w-2 h-2 rounded-full bg-orange-vibrant/40"
+                  initial={{
+                    x: Math.random() * 500 - 250,
+                    y: Math.random() * 500 - 250,
+                    opacity: 0.3 + Math.random() * 0.7,
+                    scale: 0.4 + Math.random() * 0.6,
+                  }}
+                  animate={{
+                    x: Math.random() * 500 - 250,
+                    y: Math.random() * 500 - 250,
+                    opacity: [0.3 + Math.random() * 0.7, 0.5, 0.3 + Math.random() * 0.7],
+                    scale: [0.4 + Math.random() * 0.6, 0.6 + Math.random() * 0.4, 0.4 + Math.random() * 0.6],
+                  }}
+                  transition={{
+                    duration: 10 + Math.random() * 20,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                />
+              ))}
+              
+              {[...Array(15)].map((_, index) => (
+                <motion.div
+                  key={index + 20}
+                  className="absolute w-2 h-2 rounded-full bg-deep-teal/40"
+                  initial={{
+                    x: Math.random() * 500 - 250,
+                    y: Math.random() * 500 - 250,
+                    opacity: 0.3 + Math.random() * 0.7,
+                    scale: 0.4 + Math.random() * 0.6,
+                  }}
+                  animate={{
+                    x: Math.random() * 500 - 250,
+                    y: Math.random() * 500 - 250,
+                    opacity: [0.3 + Math.random() * 0.7, 0.5, 0.3 + Math.random() * 0.7],
+                    scale: [0.4 + Math.random() * 0.6, 0.6 + Math.random() * 0.4, 0.4 + Math.random() * 0.6],
+                  }}
+                  transition={{
+                    duration: 10 + Math.random() * 20,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                />
+              ))}
+              
+              <motion.div 
+                className="text-center z-10 bg-white/30 backdrop-blur-sm px-8 py-6 rounded-xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+              >
+                <div className="text-2xl text-deep-teal font-semibold mb-4">Descubre conexiones significativas</div>
+                <div className="text-dark/80">Expande tus horizontes personales y profesionales</div>
+              </motion.div>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
         
         {/* Abstract shapes */}
         <motion.div 
