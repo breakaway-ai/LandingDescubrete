@@ -135,7 +135,6 @@ const Hero = () => {
               <motion.img 
                 src="/src/assets/images/DescubreteLaunch.avif"
                 alt="Descúbrete Launch"
-                // CLAVES: h-full, w-full, y object-cover
                 className="w-full h-full object-cover rounded-2xl" 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
