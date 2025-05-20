@@ -1,10 +1,22 @@
 import { motion } from 'framer-motion';
 
 const Footer = () => {
+  // Función para manejar el desplazamiento suave
+  const handleScrollTo = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80, // Offset para que no quede justo debajo del header
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer className="bg-deep-teal texture-footer-dots text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div>
             <motion.div 
               className="mb-6 text-3xl font-bold"
@@ -90,49 +102,30 @@ const Footer = () => {
             >
               {[
                 { name: 'Inicio', href: '#' },
-                { name: 'Comunidad', href: '#community' },
-                { name: 'Nepsis', href: '#nepsis' },
-                { name: 'Descargar', href: '#download' },
+                { name: 'Comunidad', href: '#community', id: 'community' },
+                { name: 'Nepsis', href: '#nepsis', id: 'nepsis' },
+                { name: 'Descargar', href: '#download', id: 'download' },
               ].map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-white/80 hover:text-orange-vibrant transition-colors">
-                    {link.name}
-                  </a>
+                  {link.id ? (
+                    <a 
+                      href={link.href} 
+                      onClick={handleScrollTo(link.id)}
+                      className="text-white/80 hover:text-orange-vibrant transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <a href={link.href} className="text-white/80 hover:text-orange-vibrant transition-colors">
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </motion.ul>
           </div>
 
-          <div>
-            <motion.h3 
-              className="text-xl font-bold mb-6"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              Legal
-            </motion.h3>
-            <motion.ul 
-              className="space-y-3"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              {[
-                { name: 'Términos de Servicio', href: '#' },
-                { name: 'Política de Privacidad', href: '#' },
-                { name: 'Cookies', href: '#' },
-              ].map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-white/80 hover:text-orange-vibrant transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </motion.ul>
-          </div>
+          
 
           <div>
             <motion.h3 

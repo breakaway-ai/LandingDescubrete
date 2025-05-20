@@ -11,6 +11,18 @@ const Nepsis = () => {
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
+  // Función para manejar el desplazamiento suave
+  const handleScrollTo = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80, // Offset para que no quede justo debajo del header
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="nepsis" className="py-24 bg-deep-teal texture-nepsis-wave relative overflow-hidden" ref={sectionRef}>
       <div className="container mx-auto px-4 relative z-10">
@@ -214,6 +226,7 @@ const Nepsis = () => {
             >
               <motion.a 
                 href="#download"
+                onClick={handleScrollTo('download')}
                 className="bg-orange-vibrant texture-noise text-white px-8 py-4 rounded-full font-medium inline-block"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
