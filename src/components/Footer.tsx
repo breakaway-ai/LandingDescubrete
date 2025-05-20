@@ -1,0 +1,182 @@
+import { motion } from 'framer-motion';
+
+const Footer = () => {
+  return (
+    <footer className="bg-deep-teal text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <motion.div 
+              className="mb-6 text-3xl font-bold"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              Descúbrete<span className="text-orange-vibrant">+</span>
+            </motion.div>
+            <motion.p 
+              className="text-white/80 mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              Uniendo mentes afines que desean expandir sus horizontes tanto a nivel personal como en sus carreras.
+            </motion.p>
+            <motion.div 
+              className="flex space-x-4"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              {/* Social Media Icons */}
+              {[
+                { name: 'facebook', path: 'M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z' },
+                { name: 'twitter', path: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z' },
+                { name: 'instagram', path: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-12.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6z' },
+                { name: 'linkedin', path: 'M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z' }
+              ].map((social, index) => (
+                <a 
+                  key={index} 
+                  href="#" 
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-vibrant transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d={social.path} />
+                  </svg>
+                </a>
+              ))}
+            </motion.div>
+          </div>
+
+          <div>
+            <motion.h3 
+              className="text-xl font-bold mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              Enlaces Rápidos
+            </motion.h3>
+            <motion.ul 
+              className="space-y-3"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              {[
+                { name: 'Inicio', href: '#' },
+                { name: 'Comunidad', href: '#community' },
+                { name: 'Nepsis', href: '#nepsis' },
+                { name: 'Descargar', href: '#download' },
+              ].map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} className="text-white/80 hover:text-orange-vibrant transition-colors">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </motion.ul>
+          </div>
+
+          <div>
+            <motion.h3 
+              className="text-xl font-bold mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              Legal
+            </motion.h3>
+            <motion.ul 
+              className="space-y-3"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              {[
+                { name: 'Términos de Servicio', href: '#' },
+                { name: 'Política de Privacidad', href: '#' },
+                { name: 'Cookies', href: '#' },
+              ].map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} className="text-white/80 hover:text-orange-vibrant transition-colors">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </motion.ul>
+          </div>
+
+          <div>
+            <motion.h3 
+              className="text-xl font-bold mb-6"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
+              Descarga la App
+            </motion.h3>
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              <a 
+                href="https://play.google.com/store" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 rounded-xl p-4 flex items-center gap-3 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 20.5v-17A.5.5 0 0 1 5.5 3H6l13 8.5-13 8.5h-.5a.5.5 0 0 1-.5-.5zM12 12l5.5 3.5-7 4.5V4l7 4.5L12 12z"/>
+                </svg>
+                <div>
+                  <div className="text-xs opacity-80">DESCARGA EN</div>
+                  <div className="font-medium">Google Play</div>
+                </div>
+              </a>
+              
+              <a 
+                href="https://apps.apple.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 rounded-xl p-4 flex items-center gap-3 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.37 3.51 7.08 9.05 6.88c1.65.08 2.78.94 3.75.94 1 0 2.83-1.16 4.78-.99 1.83.15 3.22.91 4.11 2.33-3.54 2.23-2.97 6.71.26 8.58-.76 1.92-1.8 3.6-3.9 4.54z"/>
+                  <path d="M12.77 4.05c.8-1.07 1.45-2.61 1.22-4.21-1.32.09-2.84.92-3.73 2.03-.82 1-1.51 2.58-1.24 4.08 1.42.11 2.87-.72 3.75-1.9z"/>
+                </svg>
+                <div>
+                  <div className="text-xs opacity-80">DESCARGA EN</div>
+                  <div className="font-medium">App Store</div>
+                </div>
+              </a>
+            </motion.div>
+          </div>
+        </div>
+
+        <motion.div 
+          className="border-t border-white/10 pt-8 text-center text-white/60 text-sm"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 1 }}
+        >
+          <p>&copy; {new Date().getFullYear()} Descúbrete+. Todos los derechos reservados.</p>
+        </motion.div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer; 

@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  
+}
+
+/* Descúbrete+ Brand Colors */
+@layer utilities {
+  .text-orange-vibrant {
+    color: #ff6600;
+  }
+  .text-deep-teal {
+    color: #003366;
+  }
+  .text-dark {
+    color: #000000;
+  }
+  .text-light-gray {
+    color: #cccccc;
+  }
+  .text-highlight-yellow {
+    color: #ffe000;
+  }
+  .text-dark-red {
+    color: #990000;
+  }
+
+  .bg-orange-vibrant {
+    background-color: #ff6600;
+  }
+  .bg-deep-teal {
+    background-color: #003366;
+  }
+  .bg-light-gray {
+    background-color: #cccccc;
+  }
+  .bg-highlight-yellow {
+    background-color: #ffe000;
+  }
+  .bg-dark-red {
+    background-color: #990000;
+  }
+}
