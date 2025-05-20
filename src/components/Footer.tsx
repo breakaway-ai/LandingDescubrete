@@ -101,7 +101,7 @@ const Footer = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               {[
-                { name: 'Inicio', href: '#' },
+                { name: 'Inicio', href: '#', id: 'inicio' },
                 { name: 'Comunidad', href: '#community', id: 'community' },
                 { name: 'Nepsis', href: '#nepsis', id: 'nepsis' },
                 { name: 'Descargar', href: '#download', id: 'download' },
