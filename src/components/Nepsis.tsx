@@ -32,31 +32,139 @@ const Nepsis = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
           <motion.div 
-            className="lg:w-1/2 order-2 lg:order-1 mt-12 lg:mt-0"
+            className="lg:w-1/2 order-2 lg:order-1 mt-12 lg:mt-0 pr-10"
             style={{ y, opacity }}
           >
             <div className="w-full h-[600px] bg-gradient-to-br from-black/20 to-orange-vibrant/20 rounded-2xl shadow-2xl backdrop-blur-sm p-8 flex items-center justify-center">
-              {/* 3D model or animation of Nepsis would go here */}
+              {/* Organic, flowing Nepsis sphere with extreme deformations */}
               <motion.div 
-                className="w-64 h-64 bg-orange-vibrant rounded-full flex items-center justify-center"
+                className="relative w-64 h-64 flex items-center justify-center"
                 animate={{ 
-                  boxShadow: [
-                    "0 0 0 0 rgba(255, 102, 0, 0)",
-                    "0 0 0 20px rgba(255, 102, 0, 0.2)",
-                    "0 0 0 40px rgba(255, 102, 0, 0.1)",
-                    "0 0 0 60px rgba(255, 102, 0, 0.05)",
-                    "0 0 0 80px rgba(255, 102, 0, 0)",
-                  ],
+                  rotate: [0, 15, -15, 0],
+                  scale: [0.95, 1.05, 0.95],
                 }}
-                transition={{ 
-                  duration: 3,
+                transition={{
+                  duration: 12,
                   repeat: Infinity,
-                  repeatType: "loop"
+                  ease: "easeInOut",
                 }}
               >
-                <div className="text-3xl font-bold text-white">
-                  Nepsis
-                </div>
+                {/* Base extremely deformed shape */}
+                <motion.div
+                  className="absolute inset-0 bg-orange-vibrant"
+                  animate={{
+                    borderRadius: [
+                      '70% 30% 20% 80%/60% 30% 70% 40%',
+                      '20% 80% 60% 40%/30% 60% 30% 70%',
+                      '80% 20% 40% 60%/30% 70% 60% 40%',
+                      '30% 70% 70% 30%/60% 40% 30% 70%',
+                      '70% 30% 20% 80%/60% 30% 70% 40%'
+                    ],
+                    scale: [0.9, 1, 1.1, 1, 0.9],
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  {/* Additional deforming overlay */}
+                  <motion.div 
+                    className="absolute inset-0 bg-orange-vibrant/30"
+                    animate={{
+                      borderRadius: [
+                        '20% 80% 80% 20%/80% 20% 80% 20%',
+                        '80% 20% 20% 80%/20% 80% 20% 80%',
+                        '20% 80% 80% 20%/80% 20% 80% 20%'
+                      ],
+                    }}
+                    transition={{
+                      duration: 7,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                </motion.div>
+                
+                {/* Outer glow effect */}
+                <motion.div
+                  className="absolute inset-0"
+                  animate={{
+                    boxShadow: [
+                      "0 0 0 0 rgba(255, 102, 0, 0)",
+                      "0 0 0 30px rgba(255, 102, 0, 0.2)",
+                      "0 0 0 50px rgba(255, 102, 0, 0.1)",
+                      "0 0 0 70px rgba(255, 102, 0, 0.05)",
+                      "0 0 0 90px rgba(255, 102, 0, 0)",
+                    ],
+                    borderRadius: [
+                      '70% 30% 20% 80%/60% 30% 70% 40%',
+                      '20% 80% 60% 40%/30% 60% 30% 70%',
+                      '80% 20% 40% 60%/30% 70% 60% 40%',
+                      '30% 70% 70% 30%/60% 40% 30% 70%',
+                      '70% 30% 20% 80%/60% 30% 70% 40%'
+                    ],
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                
+                {/* Inner rotating effect with more deformation */}
+                <motion.div
+                  className="absolute w-[85%] h-[85%] left-[7.5%] top-[7.5%] bg-orange-vibrant/30"
+                  animate={{
+                    borderRadius: [
+                      '90% 10% 80% 20%/30% 70% 20% 80%',
+                      '20% 80% 10% 90%/70% 30% 80% 20%',
+                      '80% 20% 90% 10%/10% 90% 30% 70%',
+                      '90% 10% 80% 20%/30% 70% 20% 80%'
+                    ],
+                    rotate: [0, 180, 360],
+                  }}
+                  transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+                
+                {/* Additional spinning inner blob */}
+                <motion.div
+                  className="absolute w-1/2 h-1/2 left-1/4 top-1/4 bg-orange-vibrant/20"
+                  animate={{
+                    borderRadius: [
+                      '60% 40% 70% 30%/30% 70% 40% 60%',
+                      '40% 60% 30% 70%/70% 30% 60% 40%',
+                      '60% 40% 70% 30%/30% 70% 40% 60%'
+                    ],
+                    rotate: [360, 180, 0],
+                    scale: [0.8, 1.2, 0.8],
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                
+                {/* Stabilized text container to keep text aligned */}
+                <motion.div 
+                  className="relative z-10 flex items-center justify-center"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    position: "absolute",
+                    // This ensures the text doesn't inherit deformations
+                    transform: "none"
+                  }}
+                >
+                  <div className="text-3xl font-bold text-white">
+                    Nepsis
+                  </div>
+                </motion.div>
               </motion.div>
             </div>
           </motion.div>

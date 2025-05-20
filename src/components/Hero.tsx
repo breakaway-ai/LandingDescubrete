@@ -122,9 +122,9 @@ const Hero = () => {
           
           <div className="lg:w-1/2 mt-12 lg:mt-0">
             <motion.div
-              className="w-full h-[500px] bg-gradient-to-br from-deep-teal/10 to-orange-vibrant/10 rounded-2xl flex items-center justify-center relative"
-              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              className="w-full h-[500px] rounded-2xl relative flex items-center justify-center overflow-hidden" 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ 
                 duration: 1.2, 
                 delay: 0.5,
@@ -132,83 +132,16 @@ const Hero = () => {
                 stiffness: 100 
               }}
             >
-              {/* 3D animation placeholder */}
-              <motion.div
-                className="absolute inset-0 overflow-hidden rounded-2xl"
-                animate={{
-                  background: [
-                    "radial-gradient(circle at 30% 30%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
-                    "radial-gradient(circle at 70% 70%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
-                    "radial-gradient(circle at 30% 70%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
-                    "radial-gradient(circle at 70% 30%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
-                    "radial-gradient(circle at 30% 30%, rgba(255, 102, 0, 0.2) 0%, rgba(0, 51, 102, 0.1) 50%, rgba(255, 255, 255, 0) 70%)",
-                  ],
-                }}
-                transition={{
-                  duration: 15,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
+              <motion.img 
+                src="/src/assets/images/DescubreteLaunch.avif"
+                alt="Descúbrete Launch"
+                // CLAVES: h-full, w-full, y object-cover
+                className="w-full h-full object-cover rounded-2xl" 
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                whileHover={{ scale: 1.03 }}
               />
-              
-              {/* Animated particles */}
-              {[...Array(20)].map((_, index) => (
-                <motion.div
-                  key={index}
-                  className="absolute w-2 h-2 rounded-full bg-orange-vibrant/40"
-                  initial={{
-                    x: Math.random() * 500 - 250,
-                    y: Math.random() * 500 - 250,
-                    opacity: 0.3 + Math.random() * 0.7,
-                    scale: 0.4 + Math.random() * 0.6,
-                  }}
-                  animate={{
-                    x: Math.random() * 500 - 250,
-                    y: Math.random() * 500 - 250,
-                    opacity: [0.3 + Math.random() * 0.7, 0.5, 0.3 + Math.random() * 0.7],
-                    scale: [0.4 + Math.random() * 0.6, 0.6 + Math.random() * 0.4, 0.4 + Math.random() * 0.6],
-                  }}
-                  transition={{
-                    duration: 10 + Math.random() * 20,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                />
-              ))}
-              
-              {[...Array(15)].map((_, index) => (
-                <motion.div
-                  key={index + 20}
-                  className="absolute w-2 h-2 rounded-full bg-deep-teal/40"
-                  initial={{
-                    x: Math.random() * 500 - 250,
-                    y: Math.random() * 500 - 250,
-                    opacity: 0.3 + Math.random() * 0.7,
-                    scale: 0.4 + Math.random() * 0.6,
-                  }}
-                  animate={{
-                    x: Math.random() * 500 - 250,
-                    y: Math.random() * 500 - 250,
-                    opacity: [0.3 + Math.random() * 0.7, 0.5, 0.3 + Math.random() * 0.7],
-                    scale: [0.4 + Math.random() * 0.6, 0.6 + Math.random() * 0.4, 0.4 + Math.random() * 0.6],
-                  }}
-                  transition={{
-                    duration: 10 + Math.random() * 20,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                />
-              ))}
-              
-              <motion.div 
-                className="text-center z-10 bg-white/30 backdrop-blur-sm px-8 py-6 rounded-xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-              >
-                <div className="text-2xl text-deep-teal font-semibold mb-4">Descubre conexiones significativas</div>
-                <div className="text-dark/80">Expande tus horizontes personales y profesionales</div>
-              </motion.div>
             </motion.div>
           </div>
         </motion.div>

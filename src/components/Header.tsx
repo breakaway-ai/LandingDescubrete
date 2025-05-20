@@ -17,12 +17,12 @@ const Header = () => {
           <motion.img 
             src="/src/assets/images/Logo.avif" 
             alt="Descúbrete+ Logo" 
-            className="h-10 mr-3"
+            className="h-6 sm:h-8 md:h-10 mr-2 sm:mr-3"
             initial={{ opacity: 0, rotate: -10 }}
             animate={{ opacity: 1, rotate: 0 }}
             transition={{ duration: 0.8 }}
           />
-          <div className="text-3xl font-bold text-white">
+          <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
             Descúbrete<span className="text-orange-vibrant">+</span>
           </div>
         </motion.div>
@@ -56,7 +56,7 @@ const Header = () => {
 
         <motion.a 
           href="#download"
-          className="bg-orange-vibrant text-white px-6 py-2 rounded-full font-medium"
+          className="bg-orange-vibrant text-white text-sm sm:text-base px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-medium"
           whileHover={{ 
             scale: 1.05, 
             boxShadow: "0 10px 15px -3px rgba(255, 102, 0, 0.3)",

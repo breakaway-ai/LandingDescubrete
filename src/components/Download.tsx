@@ -62,7 +62,7 @@ const Download = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto"
+              className="flex justify-center"
             >
               <img 
                 src="/src/assets/images/GetItOnGooglePlay.png"
@@ -77,7 +77,7 @@ const Download = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto"
+              className="flex justify-center"
             >
               <img 
                 src="/src/assets/images/DownloadOnTheAppStore.png"

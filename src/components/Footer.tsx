@@ -31,23 +31,43 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              {/* Social Media Icons */}
-              {[
-                { name: 'facebook', path: 'M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z' },
-                { name: 'twitter', path: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z' },
-                { name: 'instagram', path: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm0-12.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6z' },
-                { name: 'linkedin', path: 'M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z' }
-              ].map((social, index) => (
-                <a 
-                  key={index} 
-                  href="#" 
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-vibrant transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d={social.path} />
-                  </svg>
-                </a>
-              ))}
+              {/* Facebook Icon */}
+              <a 
+                href="https://www.facebook.com/profile.php?id=61553590869891" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-vibrant transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
+                </svg>
+              </a>
+              
+              {/* Instagram Icon with external image */}
+              <a 
+                href="https://www.instagram.com/descubrete_mx/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-vibrant transition-colors p-2"
+              >
+                <img 
+                  src="https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_62,h_62,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png"
+                  alt="Instagram"
+                  className="w-full h-full object-contain"
+                />
+              </a>
+              
+              {/* LinkedIn Icon */}
+              <a 
+                href="https://www.linkedin.com/company/descubretemx/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-vibrant transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                </svg>
+              </a>
             </motion.div>
           </div>
 
