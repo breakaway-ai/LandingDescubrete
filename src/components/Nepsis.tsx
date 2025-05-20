@@ -12,23 +12,7 @@ const Nepsis = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
-    <section id="nepsis" className="py-24 bg-deep-teal relative overflow-hidden" ref={sectionRef}>
-      {/* Animated background elements */}
-      <motion.div 
-        className="absolute top-20 left-10 w-80 h-80 rounded-full bg-white/5"
-        style={{ 
-          x: useTransform(scrollYProgress, [0, 1], [-50, 50]),
-          scale: useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.2, 0.8]),
-        }}
-      />
-      <motion.div 
-        className="absolute bottom-20 right-10 w-64 h-64 rounded-full bg-orange-vibrant/10"
-        style={{ 
-          x: useTransform(scrollYProgress, [0, 1], [50, -50]),
-          scale: useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 1]),
-        }}
-      />
-
+    <section id="nepsis" className="py-24 bg-deep-teal texture-nepsis-wave relative overflow-hidden" ref={sectionRef}>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
           <motion.div 
@@ -230,7 +214,7 @@ const Nepsis = () => {
             >
               <motion.a 
                 href="#download"
-                className="bg-orange-vibrant text-white px-8 py-4 rounded-full font-medium inline-block"
+                className="bg-orange-vibrant texture-noise text-white px-8 py-4 rounded-full font-medium inline-block"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

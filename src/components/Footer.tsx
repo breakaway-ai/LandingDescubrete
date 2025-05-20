@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-deep-teal text-white py-16">
+    <footer className="bg-deep-teal texture-footer-dots text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -155,7 +155,7 @@ const Footer = () => {
                 href="https://play.google.com/store" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-deep-teal/50 hover:bg-deep-teal text-white px-5 py-2 rounded-xl font-medium flex items-center justify-start gap-3 transition-colors"
+                className="texture-grid text-white px-5 py-2 rounded-xl font-medium flex items-center justify-start gap-3 transition-colors"
                 whileHover={{ scale: 1.02, x: 3 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -174,7 +174,7 @@ const Footer = () => {
                 href="https://apps.apple.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-deep-teal/50 hover:bg-deep-teal text-white px-5 py-2 rounded-xl font-medium flex items-center justify-start gap-3 transition-colors"
+                className="texture-grid text-white px-5 py-2 rounded-xl font-medium flex items-center justify-start gap-3 transition-colors"
                 whileHover={{ scale: 1.02, x: 3 }}
                 whileTap={{ scale: 0.98 }}
               >

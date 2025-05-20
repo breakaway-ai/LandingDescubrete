@@ -89,7 +89,8 @@ const Download = () => {
 
           {/* QR Code Section */}
           <motion.div 
-            className="mt-16 bg-gradient-to-br from-light-gray/20 to-white p-8 rounded-3xl shadow-lg inline-block"
+            className="mt-16 p-8 rounded-3xl shadow-lg inline-block"
+            style={{ background: "linear-gradient(to bottom right, #003366, #1a4d80, #0066cc)" }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -98,13 +99,16 @@ const Download = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-[200px] h-[200px] bg-white p-4 rounded-xl shadow-md flex items-center justify-center">
                 {/* Replace with actual QR code */}
-                <div className="w-full h-full bg-deep-teal/10 flex items-center justify-center">
-                  <p className="text-center text-deep-teal">QR Code para escanear</p>
+                <div 
+                  className="w-full h-full flex items-center justify-center rounded-lg"
+                  style={{ background: "linear-gradient(to bottom right, #003366, #0066cc)" }}
+                >
+                  <p className="text-center text-white font-medium">QR Code para escanear</p>
                 </div>
               </div>
-              <div className="text-left max-w-xs">
-                <h3 className="text-2xl font-bold mb-3 text-deep-teal">Escanea y descarga</h3>
-                <p>Escanea este código QR con tu cámara para descargar Descúbrete+ directamente a tu dispositivo.</p>
+              <div className="text-left max-w-xs text-white">
+                <h3 className="text-2xl font-bold mb-3 text-white">Escanea y descarga</h3>
+                <p className="text-white/90">Escanea este código QR con tu cámara para descargar Descúbrete+ directamente a tu dispositivo.</p>
               </div>
             </div>
           </motion.div>

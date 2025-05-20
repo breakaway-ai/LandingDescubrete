@@ -84,7 +84,7 @@ const Hero = () => {
                 href="https://play.google.com/store" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-deep-teal text-white px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 shadow-lg"
+                className="bg-deep-teal texture-circuit text-white px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 shadow-lg"
                 whileHover={{ scale: 1.05, boxShadow: "0 15px 25px -5px rgba(0, 51, 102, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -144,33 +144,6 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
-        
-        {/* Abstract shapes */}
-        <motion.div 
-          className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-orange-vibrant/10 z-0"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 180, 270, 360],
-          }}
-          transition={{ 
-            duration: 20,
-            repeat: Infinity,
-            repeatType: "loop"
-          }}
-        />
-        
-        <motion.div 
-          className="absolute top-20 -right-10 w-40 h-40 rounded-full bg-deep-teal/10 z-0"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            x: [0, 30, 0],
-          }}
-          transition={{ 
-            duration: 15,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-        />
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <motion.header 
-      className="fixed w-full z-50 bg-deep-teal py-4"
+      className="fixed w-full z-50 bg-deep-teal texture-header py-4"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -77,7 +77,7 @@ const Header = () => {
         <motion.a 
           href="#download"
           onClick={handleScrollTo('download')}
-          className="hidden md:flex bg-orange-vibrant text-white text-sm sm:text-base px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-medium"
+          className="hidden md:flex bg-orange-vibrant texture-noise text-white text-sm sm:text-base px-4 sm:px-6 py-1.5 sm:py-2 rounded-full font-medium"
           whileHover={{ 
             scale: 1.05, 
             boxShadow: "0 10px 15px -3px rgba(255, 102, 0, 0.3)",
@@ -125,7 +125,7 @@ const Header = () => {
       
       {/* Mobile Menu */}
       <motion.div
-        className="fixed inset-0 bg-deep-teal z-40 md:hidden pt-20"
+        className="fixed inset-0 bg-deep-teal texture-header z-40 md:hidden pt-20"
         initial={{ opacity: 0, y: -20, height: 0 }}
         animate={{ 
           opacity: isMenuOpen ? 1 : 0, 
@@ -164,7 +164,7 @@ const Header = () => {
             <motion.a
               href="#download"
               onClick={handleScrollTo('download')}
-              className="mt-6 bg-gradient-to-r from-orange-vibrant to-orange-vibrant/90 text-white px-8 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg"
+              className="mt-6 bg-gradient-to-r from-orange-vibrant to-orange-vibrant/90 texture-noise text-white px-8 py-3 rounded-full font-medium flex items-center gap-2 shadow-lg"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: isMenuOpen ? 1 : 0, scale: isMenuOpen ? 1 : 0.9 }}
               transition={{ delay: 0.5 }}
