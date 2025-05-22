@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import DownloadOnTheAppStore  from '../assets/images/DownloadOnTheAppStore.png';
+import GetItOnGooglePlay  from '../assets/images/GetItOnGooglePlay.png';
 
 const Download = () => {
   return (
@@ -65,7 +67,7 @@ const Download = () => {
               className="flex justify-center"
             >
               <img 
-                src="/src/assets/images/GetItOnGooglePlay.png"
+                src={GetItOnGooglePlay}
                 alt="Get it on Google Play" 
                 className="h-16 w-auto object-contain"
               />
@@ -80,7 +82,7 @@ const Download = () => {
               className="flex justify-center"
             >
               <img 
-                src="/src/assets/images/DownloadOnTheAppStore.png"
+                src={DownloadOnTheAppStore}
                 alt="Download on the App Store" 
                 className="h-16 w-auto object-contain"
               />

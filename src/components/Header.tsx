@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Logo from '../assets/images/Logo.avif';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           <motion.img 
-            src="/src/assets/images/Logo.avif" 
+            src={Logo} 
             alt="Descúbrete+ Logo" 
             className="h-6 sm:h-8 md:h-10 mr-2 sm:mr-3"
             initial={{ opacity: 0, rotate: -10 }}

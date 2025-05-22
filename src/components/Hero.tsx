@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion';
+import DownloadOnTheAppStore  from '../assets/images/LogoAppStore.webp';
+import GetItOnGooglePlay  from '../assets/images/LogoGooglePlay.png';
+import DescubreteLaunch  from '../assets/images/DescubreteLaunch.avif';
+
 
 const Hero = () => {
   // Animation variants for staggered animation
@@ -89,7 +93,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <img 
-                  src="/src/assets/images/LogoGooglePlay.png" 
+                  src={GetItOnGooglePlay}
                   alt="Google Play" 
                   className="h-8"
                 />
@@ -108,7 +112,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <img 
-                  src="/src/assets/images/LogoAppStore.webp" 
+                  src={DownloadOnTheAppStore} 
                   alt="App Store" 
                   className="h-8"
                 />
@@ -133,7 +137,7 @@ const Hero = () => {
               }}
             >
               <motion.img 
-                src="/src/assets/images/DescubreteLaunch.avif"
+                src={DescubreteLaunch}
                 alt="Descúbrete Launch"
                 className="w-full h-full object-cover rounded-2xl" 
                 initial={{ y: 20, opacity: 0 }}

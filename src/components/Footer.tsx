@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import DownloadOnTheAppStore  from '../assets/images/LogoAppStore.webp';
+import GetItOnGooglePlay  from '../assets/images/LogoGooglePlay.png';
 
 const Footer = () => {
   // Función para manejar el desplazamiento suave
@@ -153,7 +155,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <img 
-                  src="/src/assets/images/LogoGooglePlay.png" 
+                  src={GetItOnGooglePlay} 
                   alt="Google Play" 
                   className="h-6"
                 />
@@ -172,7 +174,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <img 
-                  src="/src/assets/images/LogoAppStore.webp" 
+                  src={DownloadOnTheAppStore} 
                   alt="App Store" 
                   className="h-6"
                 />
