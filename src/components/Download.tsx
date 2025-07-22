@@ -76,7 +76,7 @@ const Download = () => {
                   placeholder="tu@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-6 py-4 rounded-full text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-vibrant border-2 border-transparent"
+                  className="flex-1 px-6 py-4 rounded-full text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-vibrant border-2"
                   required
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
