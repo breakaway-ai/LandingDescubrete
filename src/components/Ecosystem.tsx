@@ -58,12 +58,12 @@ const Ecosystem = () => {
                     </svg>
                   </motion.div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">Nepsis</h3>
+                    <h3 className="text-2xl font-bold">Nepsis</h3>
                     <p className="text-orange-vibrant font-medium">Agente de IA Emocional</p>
                   </div>
                 </div>
                 
-                <p className="text-white/90 text-lg mb-6">
+                <p className="text-lg mb-6">
                   Nuestro agente de inteligencia artificial especializado en coaching emocional y desarrollo personal. Nepsis utiliza algoritmos avanzados de machine learning para proporcionar apoyo personalizado 24/7.
                 </p>
 
@@ -76,7 +76,7 @@ const Ecosystem = () => {
                   ].map((feature, index) => (
                     <motion.div 
                       key={index}
-                      className="flex items-center text-white/80"
+                      className="flex items-center/80"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -128,12 +128,12 @@ const Ecosystem = () => {
                     </svg>
                   </motion.div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">Descúbrete+</h3>
+                    <h3 className="text-2xl font-bold">Descúbrete+</h3>
                     <p className="text-deep-teal font-medium">Aplicación Móvil</p>
                   </div>
                 </div>
                 
-                <p className="text-white/90 text-lg mb-6">
+                <p className="text-lg mb-6">
                   Plataforma social digital de próxima generación que conecta profesionales y personas en busca de crecimiento. Integra tecnologías emergentes para una experiencia de comunidad única.
                 </p>
 
@@ -146,7 +146,7 @@ const Ecosystem = () => {
                   ].map((feature, index) => (
                     <motion.div 
                       key={index}
-                      className="flex items-center text-white/80"
+                      className="flex items-center/80"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -164,13 +164,13 @@ const Ecosystem = () => {
 
         {/* Tech Stack */}
         <motion.div 
-          className="bg-white rounded-3xl p-8 shadow-lg"
+          className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h3 className="text-2xl font-bold text-center mb-8 text-deep-teal">
+          <h3 className="text-3xl font-bold text-center mb-8 text-deep-teal">
             Tecnología de Vanguardia
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -178,19 +178,19 @@ const Ecosystem = () => {
               { name: "Machine Learning", icon: "🤖" },
               { name: "Cloud Computing", icon: "☁️" },
               { name: "Real-time Analytics", icon: "📊" },
-              { name: "Blockchain", icon: "🔗" }
+              { name: "Agentic AI", icon: "🧠" }
             ].map((tech, index) => (
               <motion.div 
                 key={index}
-                className="p-4 rounded-xl bg-gradient-to-br from-light-gray/20 to-light-gray/10"
+                className="p-6 rounded-xl bg-white shadow-md border border-gray-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
               >
-                <div className="text-3xl mb-2">{tech.icon}</div>
-                <p className="font-medium text-gray-700">{tech.name}</p>
+                <div className="text-4xl mb-3">{tech.icon}</div>
+                <p className="font-semibold text-gray-800">{tech.name}</p>
               </motion.div>
             ))}
           </div>

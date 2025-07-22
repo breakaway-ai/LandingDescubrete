@@ -25,11 +25,11 @@ const Community = () => {
           variants={fadeInUp}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-deep-teal">Una comunidad </span>
-            <span className="text-orange-vibrant">vibrante</span>
+            <span className="text-deep-teal">Comunidad de </span>
+            <span className="text-orange-vibrant">crecimiento personal</span>
           </h2>
           <p className="text-xl">
-            Descúbrete+ es más que una plataforma, es un ecosistema de comunidad diseñado para personas y profesionales que buscan un crecimiento personal y profesional continuo.
+            Descúbrete+ conecta personas comprometidas con su transformación personal en una red global de apoyo y crecimiento mutuo. Más que contactos, creamos conexiones auténticas que impulsan tu evolución personal y profesional.
           </p>
         </motion.div>
 
@@ -210,9 +210,9 @@ const Community = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-3xl font-bold mb-4 text-deep-teal">Conexiones Significativas</h3>
+              <h3 className="text-3xl font-bold mb-4 text-deep-teal">Conexiones Auténticas</h3>
               <p className="text-lg">
-                Forma parte de una red de personas con intereses similares, donde cada conexión te acerca más a tus metas personales y profesionales.
+                Encuentra personas que comparten tus valores, metas y visión de crecimiento. Creamos vínculos genuinos basados en compatibilidad de objetivos y apoyo mutuo.
               </p>
             </motion.div>
           </div>
@@ -222,16 +222,16 @@ const Community = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: "Conexiones Significativas",
-              description: "Conéctate con personas afines que comparten tus intereses y metas profesionales."
+              title: "Círculos de Crecimiento",
+              description: "Grupos pequeños de personas con objetivos similares que se apoyan mutuamente en su transformación personal."
             },
             {
-              title: "Crecimiento Constante",
-              description: "Accede a recursos personalizados que te ayudarán a crecer profesional y personalmente."
+              title: "Mentorías Personalizadas",
+              description: "Conecta con mentores experimentados que han recorrido el camino que tú quieres transitar."
             },
             {
-              title: "Comunidad de Apoyo",
-              description: "Forma parte de una comunidad que te brinda el soporte que necesitas en tu camino."
+              title: "Red de Apoyo Global",
+              description: "Comunidad de 25K+ personas comprometidas con su desarrollo personal y crecimiento continuo."
             }
           ].map((feature, index) => (
             <motion.div 

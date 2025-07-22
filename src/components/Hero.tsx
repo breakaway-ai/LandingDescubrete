@@ -54,9 +54,9 @@ const Hero = () => {
                   }
                 }}
               >
-                Construye tu futuro
+                Acelera tu futuro
               </motion.span> 
-              <span> con nuestra </span>
+              <span> con </span>
               <motion.span 
                 className="text-orange-vibrant inline-block"
                 animate={{ 
@@ -69,7 +69,7 @@ const Hero = () => {
                   }
                 }}
               >
-                comunidad
+                inteligencia artificial
               </motion.span>
             </motion.h1>
             
@@ -77,50 +77,40 @@ const Hero = () => {
               className="text-xl mb-8 max-w-xl"
               variants={itemVariants}
             >
-              Descúbrete+ es un ecosistema de comunidad vibrante para personas que buscan crecimiento personal y profesional, con acceso a Nepsis, tu coach emocional personalizado.
+              Descúbrete+ es el ecosistema tecnológico que combina una plataforma social de última generación con Nepsis, nuestro agente de IA emocional. Diseñado para profesionales y startups que buscan acelerar su crecimiento exponencial.
             </motion.p>
             
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
               variants={itemVariants}
             >
-              <motion.a 
-                href="https://play.google.com/store" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-deep-teal texture-circuit text-white px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 shadow-lg"
-                whileHover={{ scale: 1.05, boxShadow: "0 15px 25px -5px rgba(0, 51, 102, 0.3)" }}
-                whileTap={{ scale: 0.95 }}
+              <motion.div 
+                className="bg-deep-teal/20 border border-deep-teal text-deep-teal px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 cursor-default"
               >
                 <img 
                   src={GetItOnGooglePlay}
                   alt="Google Play" 
-                  className="h-8"
+                  className="h-8 opacity-50"
                 />
                 <div className="text-left">
-                  <div className="text-xs opacity-80">DESCARGA EN</div>
+                  <div className="text-xs opacity-80">PRÓXIMAMENTE</div>
                   <div className="font-medium">Google Play</div>
                 </div>
-              </motion.a>
+              </motion.div>
               
-              <motion.a 
-                href="https://apps.apple.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-dark text-deep-teal px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 shadow-xl"
-                whileHover={{ scale: 1.05, boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.3)" }}
-                whileTap={{ scale: 0.95 }}
+              <motion.div 
+                className="bg-gray-100 border border-gray-300 text-gray-600 px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-3 cursor-default"
               >
                 <img 
                   src={DownloadOnTheAppStore} 
                   alt="App Store" 
-                  className="h-8"
+                  className="h-8 opacity-50"
                 />
                 <div className="text-left">
-                  <div className="text-xs opacity-80">DESCARGA EN</div>
+                  <div className="text-xs opacity-80">PRÓXIMAMENTE</div>
                   <div className="font-medium">App Store</div>
                 </div>
-              </motion.a>
+              </motion.div>
             </motion.div>
           </motion.div>
           

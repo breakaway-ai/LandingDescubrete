@@ -173,27 +173,27 @@ const Nepsis = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Conoce a <span className="text-orange-vibrant">Nepsis</span>,<br/>
-              tu coach emocional
+              <span className="text-orange-vibrant">Nepsis</span>: El agente de IA<br/>
+              que revoluciona el coaching
             </h2>
             
             <p className="text-xl mb-8 text-white/90">
-              Dentro de nuestra aplicación, tendrás acceso exclusivo a Nepsis, tu coach emocional personalizado impulsado por IA, diseñado para brindarte apoyo en tu bienestar emocional y desarrollo personal.
+              Nuestro flagship product combina machine learning avanzado, procesamiento de lenguaje natural y análisis emocional para crear el primer agente de IA verdaderamente empático. Nepsis no solo entiende, sino que evoluciona contigo.
             </p>
 
             <div className="space-y-6">
               {[
                 {
-                  title: "Soporte Personalizado",
-                  description: "Nepsis aprende y se adapta a tus necesidades específicas."
+                  title: "Inteligencia Emocional Avanzada",
+                  description: "Algoritmos de última generación para entender y responder a complejas emociones humanas."
                 },
                 {
-                  title: "Disponible 24/7",
-                  description: "Accede a tu coach emocional en cualquier momento que lo necesites."
+                  title: "Machine Learning Adaptativo",
+                  description: "Nepsis mejora continuamente usando redes neuronales profundas y análisis predictivo."
                 },
                 {
-                  title: "Evolución Constante",
-                  description: "Nepsis evoluciona contigo, ofreciendo apoyo cada vez más relevante."
+                  title: "API Conversacional Avanzada",
+                  description: "Interfaz de conversación natural potenciada por modelos de lenguaje de vanguardia."
                 }
               ].map((feature, index) => (
                 <motion.div 
@@ -231,7 +231,7 @@ const Nepsis = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Conoce a Nepsis
+                Experimenta la IA del Futuro
               </motion.a>
             </motion.div>
           </motion.div>

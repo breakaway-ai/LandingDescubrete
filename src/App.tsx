@@ -1,8 +1,11 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Community from './components/Community';
+import Ecosystem from './components/Ecosystem';
 import Nepsis from './components/Nepsis';
+import Content from './components/Content';
+import Community from './components/Community';
 import Download from './components/Download';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -11,9 +14,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Community />
+        <Ecosystem />
         <Nepsis />
+        <Content />
+        <Community />
         <Download />
+        <Contact />
       </main>
       <Footer />
     </div>
